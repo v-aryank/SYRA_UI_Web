@@ -1,96 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================================
+   SIRA Design System — JARVIS / Iron Man Futuristic Theme
+   All colors in HSL. Neon blue + deep black + glassmorphism.
+   ============================================================ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core palette — deep space black + electric blue */
+    --background: 220 20% 2%;
+    --foreground: 210 100% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 25% 6%;
+    --card-foreground: 210 100% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 6%;
+    --popover-foreground: 210 100% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary — electric neon blue */
+    --primary: 225 100% 55%;
+    --primary-foreground: 220 20% 2%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary — muted blue-grey */
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 60% 75%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 10%;
+    --muted-foreground: 215 20% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 230 80% 60%;
+    --accent-foreground: 220 20% 2%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 30% 15%;
+    --input: 220 25% 12%;
+    --ring: 225 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* SIRA custom tokens */
+    --sira-glow: 225 100% 55%;
+    --sira-glow-secondary: 260 80% 55%;
+    --sira-core-size: clamp(200px, 35vmin, 400px);
+    --sira-neon: 0 0 20px hsl(225 100% 55% / 0.6), 0 0 60px hsl(225 100% 55% / 0.3), 0 0 100px hsl(225 100% 55% / 0.1);
+    --sira-glass-bg: hsl(220 25% 6% / 0.6);
+    --sira-glass-border: hsl(225 100% 55% / 0.15);
+    --sira-glass-blur: 20px;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (unused but required) */
+    --sidebar-background: 220 20% 4%;
+    --sidebar-foreground: 210 100% 85%;
+    --sidebar-primary: 225 100% 55%;
+    --sidebar-primary-foreground: 220 20% 2%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 60% 75%;
+    --sidebar-border: 220 30% 15%;
+    --sidebar-ring: 225 100% 55%;
   }
 }
 
@@ -101,5 +72,137 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Rajdhani', sans-serif;
+    overflow: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+/* ============================================================
+   SIRA Component Classes
+   ============================================================ */
+@layer components {
+  /* Glassmorphism panel */
+  .sira-glass {
+    background: var(--sira-glass-bg);
+    backdrop-filter: blur(var(--sira-glass-blur));
+    -webkit-backdrop-filter: blur(var(--sira-glass-blur));
+    border: 1px solid var(--sira-glass-border);
+    border-radius: var(--radius);
+  }
+
+  /* Neon glow text */
+  .sira-neon-text {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.6),
+                 0 0 30px hsl(var(--primary) / 0.3);
+  }
+
+  /* Button glow effect */
+  .sira-btn-glow {
+    @apply relative overflow-hidden transition-all duration-300;
+    background: hsl(var(--secondary));
+    border: 1px solid hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary));
+  }
+
+  .sira-btn-glow:hover {
+    border-color: hsl(var(--primary) / 0.6);
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3),
+                inset 0 0 15px hsl(var(--primary) / 0.1);
+    color: hsl(var(--foreground));
+  }
+
+  .sira-btn-glow:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.5),
+                inset 0 0 20px hsl(var(--primary) / 0.2);
+  }
+
+  /* ============================================================
+     AI Core State Classes
+     Control via JS: add class to #ai-core element
+     ============================================================ */
+
+  /* Idle: slow gentle pulse */
+  .sira-state-idle .sira-core-blob {
+    animation: sira-pulse-idle 4s ease-in-out infinite;
+  }
+
+  /* Listening: faster pulse, brighter glow */
+  .sira-state-listening .sira-core-blob {
+    animation: sira-pulse-listening 1.5s ease-in-out infinite;
+    filter: brightness(1.3);
+  }
+
+  /* Thinking: rotating shimmer */
+  .sira-state-thinking .sira-core-blob {
+    animation: sira-pulse-thinking 2s ease-in-out infinite, sira-rotate 3s linear infinite;
+  }
+
+  /* Speaking: rapid pulse with scale */
+  .sira-state-speaking .sira-core-blob {
+    animation: sira-pulse-speaking 0.8s ease-in-out infinite;
+    filter: brightness(1.4) saturate(1.2);
+  }
+}
+
+/* ============================================================
+   Keyframe Animations
+   ============================================================ */
+@keyframes sira-pulse-idle {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.03); opacity: 1; }
+}
+
+@keyframes sira-pulse-listening {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes sira-pulse-thinking {
+  0%, 100% { transform: scale(0.97); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes sira-pulse-speaking {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes sira-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sira-blob-morph1 {
+  0%, 100% { border-radius: 30% 60% 63% 37% / 40% 45% 58% 60%; }
+  25% { border-radius: 50% 40% 55% 45% / 55% 35% 60% 40%; }
+  50% { border-radius: 35% 55% 45% 60% / 40% 60% 35% 55%; }
+  75% { border-radius: 45% 50% 38% 58% / 60% 40% 50% 45%; }
+}
+
+@keyframes sira-blob-morph2 {
+  0%, 100% { border-radius: 35% 55% 58% 45% / 48% 50% 60% 50%; }
+  33% { border-radius: 55% 35% 45% 60% / 40% 55% 45% 50%; }
+  66% { border-radius: 40% 60% 50% 40% / 55% 45% 55% 45%; }
+}
+
+@keyframes sira-blob-morph3 {
+  0%, 100% { border-radius: 40% 44% 47% 37% / 40% 45% 43% 45%; }
+  50% { border-radius: 50% 35% 55% 42% / 45% 55% 40% 50%; }
+}
+
+@keyframes sira-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Wave animation for the visualizer */
+@keyframes sira-wave-flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
