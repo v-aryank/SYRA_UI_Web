@@ -154,7 +154,7 @@ const ParticleCanvas = () => {
       const cosAngle = Math.cos(turnAngle);
 
       // Clear with black background
-      ctx.fillStyle = "#000000";
+      ctx.fillStyle = "hsl(220, 20%, 2%)";
       ctx.fillRect(0, 0, displayWidth, displayHeight);
 
       // Update and draw particles
