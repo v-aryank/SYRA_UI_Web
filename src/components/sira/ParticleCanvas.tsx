@@ -106,7 +106,7 @@ const ParticleCanvas = () => {
         p.y = p.oy * m + projCenterY;
         p.z = rotZ;
 
-        if (p.%.0 > zMax || m < 0) {
+        if (p.z > zMax || m < 0) {
           // Remove and recycle
           const next = p.next;
           if (prev) prev.next = next;
