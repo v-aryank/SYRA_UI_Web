@@ -178,27 +178,20 @@
   to { transform: rotate(360deg); }
 }
 
-@keyframes sira-blob-morph1 {
-  0%, 100% { border-radius: 30% 60% 63% 37% / 40% 45% 58% 60%; }
-  25% { border-radius: 50% 40% 55% 45% / 55% 35% 60% 40%; }
-  50% { border-radius: 35% 55% 45% 60% / 40% 60% 35% 55%; }
-  75% { border-radius: 45% 50% 38% 58% / 60% 40% 50% 45%; }
+/* Original SIRA blob rotation animations */
+@keyframes sira-blob-rotate1 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
 }
 
-@keyframes sira-blob-morph2 {
-  0%, 100% { border-radius: 35% 55% 58% 45% / 48% 50% 60% 50%; }
-  33% { border-radius: 55% 35% 45% 60% / 40% 55% 45% 50%; }
-  66% { border-radius: 40% 60% 50% 40% / 55% 45% 55% 45%; }
+@keyframes sira-blob-rotate2 {
+  0% { transform: rotate(90deg); }
+  100% { transform: rotate(270deg); }
 }
 
-@keyframes sira-blob-morph3 {
-  0%, 100% { border-radius: 40% 44% 47% 37% / 40% 45% 43% 45%; }
-  50% { border-radius: 50% 35% 55% 42% / 45% 55% 40% 50%; }
-}
-
-@keyframes sira-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+@keyframes sira-blob-rotate3 {
+  0% { transform: rotate(180deg); }
+  100% { transform: rotate(540deg); }
 }
 
 /* Wave animation for the visualizer */
