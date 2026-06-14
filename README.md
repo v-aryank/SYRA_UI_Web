@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Welcome
 
 TODO: Document your project here
