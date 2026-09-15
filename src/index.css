@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 /* ============================================================
-   SIRA Design System — JARVIS / Iron Man Futuristic Theme
+   SYRA Design System — JARVIS / Iron Man Futuristic Theme
    All colors in HSL. Neon blue + deep black + glassmorphism.
    ============================================================ */
 
@@ -44,14 +44,14 @@
 
     --radius: 0.75rem;
 
-    /* SIRA custom tokens */
-    --sira-glow: 225 100% 55%;
-    --sira-glow-secondary: 260 80% 55%;
-    --sira-core-size: clamp(200px, 35vmin, 400px);
-    --sira-neon: 0 0 20px hsl(225 100% 55% / 0.6), 0 0 60px hsl(225 100% 55% / 0.3), 0 0 100px hsl(225 100% 55% / 0.1);
-    --sira-glass-bg: hsl(220 25% 6% / 0.6);
-    --sira-glass-border: hsl(225 100% 55% / 0.15);
-    --sira-glass-blur: 20px;
+    /* SYRA custom tokens */
+    --SYRA-glow: 225 100% 55%;
+    --SYRA-glow-secondary: 260 80% 55%;
+    --SYRA-core-size: clamp(200px, 35vmin, 400px);
+    --SYRA-neon: 0 0 20px hsl(225 100% 55% / 0.6), 0 0 60px hsl(225 100% 55% / 0.3), 0 0 100px hsl(225 100% 55% / 0.1);
+    --SYRA-glass-bg: hsl(220 25% 6% / 0.6);
+    --SYRA-glass-border: hsl(225 100% 55% / 0.15);
+    --SYRA-glass-blur: 20px;
 
     /* Sidebar (unused but required) */
     --sidebar-background: 220 20% 4%;
@@ -82,41 +82,41 @@
 }
 
 /* ============================================================
-   SIRA Component Classes
+   SYRA Component Classes
    ============================================================ */
 @layer components {
   /* Glassmorphism panel */
-  .sira-glass {
-    background: var(--sira-glass-bg);
-    backdrop-filter: blur(var(--sira-glass-blur));
-    -webkit-backdrop-filter: blur(var(--sira-glass-blur));
-    border: 1px solid var(--sira-glass-border);
+  .SYRA-glass {
+    background: var(--SYRA-glass-bg);
+    backdrop-filter: blur(var(--SYRA-glass-blur));
+    -webkit-backdrop-filter: blur(var(--SYRA-glass-blur));
+    border: 1px solid var(--SYRA-glass-border);
     border-radius: var(--radius);
   }
 
   /* Neon glow text */
-  .sira-neon-text {
+  .SYRA-neon-text {
     color: hsl(var(--primary));
     text-shadow: 0 0 10px hsl(var(--primary) / 0.6),
                  0 0 30px hsl(var(--primary) / 0.3);
   }
 
   /* Button glow effect */
-  .sira-btn-glow {
+  .SYRA-btn-glow {
     @apply relative overflow-hidden transition-all duration-300;
     background: hsl(var(--secondary));
     border: 1px solid hsl(var(--primary) / 0.2);
     color: hsl(var(--primary));
   }
 
-  .sira-btn-glow:hover {
+  .SYRA-btn-glow:hover {
     border-color: hsl(var(--primary) / 0.6);
     box-shadow: 0 0 15px hsl(var(--primary) / 0.3),
                 inset 0 0 15px hsl(var(--primary) / 0.1);
     color: hsl(var(--foreground));
   }
 
-  .sira-btn-glow:active {
+  .SYRA-btn-glow:active {
     transform: scale(0.95);
     box-shadow: 0 0 25px hsl(var(--primary) / 0.5),
                 inset 0 0 20px hsl(var(--primary) / 0.2);
@@ -128,24 +128,24 @@
      ============================================================ */
 
   /* Idle: slow gentle pulse */
-  .sira-state-idle .sira-core-blob {
-    animation: sira-pulse-idle 4s ease-in-out infinite;
+  .SYRA-state-idle .SYRA-core-blob {
+    animation: SYRA-pulse-idle 4s ease-in-out infinite;
   }
 
   /* Listening: faster pulse, brighter glow */
-  .sira-state-listening .sira-core-blob {
-    animation: sira-pulse-listening 1.5s ease-in-out infinite;
+  .SYRA-state-listening .SYRA-core-blob {
+    animation: SYRA-pulse-listening 1.5s ease-in-out infinite;
     filter: brightness(1.3);
   }
 
   /* Thinking: rotating shimmer */
-  .sira-state-thinking .sira-core-blob {
-    animation: sira-pulse-thinking 2s ease-in-out infinite, sira-rotate 3s linear infinite;
+  .SYRA-state-thinking .SYRA-core-blob {
+    animation: SYRA-pulse-thinking 2s ease-in-out infinite, SYRA-rotate 3s linear infinite;
   }
 
   /* Speaking: rapid pulse with scale */
-  .sira-state-speaking .sira-core-blob {
-    animation: sira-pulse-speaking 0.8s ease-in-out infinite;
+  .SYRA-state-speaking .SYRA-core-blob {
+    animation: SYRA-pulse-speaking 0.8s ease-in-out infinite;
     filter: brightness(1.4) saturate(1.2);
   }
 }
@@ -153,49 +153,49 @@
 /* ============================================================
    Keyframe Animations
    ============================================================ */
-@keyframes sira-pulse-idle {
+@keyframes SYRA-pulse-idle {
   0%, 100% { transform: scale(1); opacity: 0.85; }
   50% { transform: scale(1.03); opacity: 1; }
 }
 
-@keyframes sira-pulse-listening {
+@keyframes SYRA-pulse-listening {
   0%, 100% { transform: scale(1); opacity: 0.9; }
   50% { transform: scale(1.08); opacity: 1; }
 }
 
-@keyframes sira-pulse-thinking {
+@keyframes SYRA-pulse-thinking {
   0%, 100% { transform: scale(0.97); opacity: 0.8; }
   50% { transform: scale(1.05); opacity: 1; }
 }
 
-@keyframes sira-pulse-speaking {
+@keyframes SYRA-pulse-speaking {
   0%, 100% { transform: scale(1); opacity: 0.9; }
   50% { transform: scale(1.1); opacity: 1; }
 }
 
-@keyframes sira-rotate {
+@keyframes SYRA-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Original SIRA blob rotation animations */
-@keyframes sira-blob-rotate1 {
+/* Original SYRA blob rotation animations */
+@keyframes SYRA-blob-rotate1 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(359deg); }
 }
 
-@keyframes sira-blob-rotate2 {
+@keyframes SYRA-blob-rotate2 {
   0% { transform: rotate(90deg); }
   100% { transform: rotate(270deg); }
 }
 
-@keyframes sira-blob-rotate3 {
+@keyframes SYRA-blob-rotate3 {
   0% { transform: rotate(180deg); }
   100% { transform: rotate(540deg); }
 }
 
 /* Wave animation for the visualizer */
-@keyframes sira-wave-flow {
+@keyframes SYRA-wave-flow {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }

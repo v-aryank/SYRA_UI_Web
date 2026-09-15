@@ -1,5 +1,5 @@
 /**
- * ParticleCanvas — Faithful port of the original SIRA script.js particle sphere.
+ * ParticleCanvas — Faithful port of the original SYRA script.js particle sphere.
  * Uses the same linked-list particle system, envelope alpha, stuck time,
  * random acceleration, and depth-based darkening as the original.
  */

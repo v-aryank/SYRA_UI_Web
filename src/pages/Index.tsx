@@ -1,21 +1,21 @@
 /**
- * SIRA — Main AI Assistant Dashboard
+ * SYRA — Main AI Assistant Dashboard
  * Layout: Full viewport flex column
  *   - Center: AI Core with particle sphere overlay
  *   - Bottom: Wave visualizer + Input bar
  * All elements use flexbox for perfect centering and responsiveness.
  */
 import { useState } from "react";
-import BackgroundGrid from "@/components/sira/BackgroundGrid";
-import AICore from "@/components/sira/AICore";
-import ParticleCanvas from "@/components/sira/ParticleCanvas";
-import WaveVisualizer from "@/components/sira/WaveVisualizer";
-import InputBar from "@/components/sira/InputBar";
+import BackgroundGrid from "@/components/syra/BackgroundGrid";
+import AICore from "@/components/syra/AICore";
+import ParticleCanvas from "@/components/syra/ParticleCanvas";
+import WaveVisualizer from "@/components/syra/WaveVisualizer";
+import InputBar from "@/components/syra/InputBar";
 
-type SiraState = "idle" | "listening" | "thinking" | "speaking";
+type SYRAState = "idle" | "listening" | "thinking" | "speaking";
 
 const Index = () => {
-  const [state, setState] = useState<SiraState>("idle");
+  const [state, setState] = useState<SYRAState>("idle");
   const [isListening, setIsListening] = useState(false);
 
   const handleMicToggle = (listening: boolean) => {
@@ -40,8 +40,8 @@ const Index = () => {
 
       {/* Top bar — minimal branding */}
       <header className="relative z-10 flex items-center justify-between px-6 py-4">
-        <h1 className="font-display text-xs tracking-[0.4em] uppercase sira-neon-text">
-          SIRA 3.0
+        <h1 className="font-display text-xs tracking-[0.4em] uppercase SYRA-neon-text">
+          SYRA 3.0
         </h1>
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />

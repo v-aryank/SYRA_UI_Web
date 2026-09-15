@@ -61,9 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        sira: {
-          glow: "hsl(var(--sira-glow))",
-          "glow-secondary": "hsl(var(--sira-glow-secondary))",
+        SYRA: {
+          glow: "hsl(var(--SYRA-glow))",
+          "glow-secondary": "hsl(var(--SYRA-glow-secondary))",
         },
       },
       borderRadius: {

@@ -37,7 +37,7 @@ const InputBar = ({
     <div className="w-full max-w-2xl mx-auto px-4 animate-fade-in">
       {/* Input container with glassmorphism */}
       <div
-        className={`sira-glass flex items-center gap-2 px-4 py-2 transition-all duration-300 ${
+        className={`SYRA-glass flex items-center gap-2 px-4 py-2 transition-all duration-300 ${
           focused ? "border-primary/40 shadow-[0_0_30px_hsl(225_100%_55%/0.15)]" : ""
         }`}
       >
@@ -57,7 +57,7 @@ const InputBar = ({
         {message.trim() && (
           <button
             onClick={handleSend}
-            className="sira-btn-glow p-2 rounded-lg"
+            className="SYRA-btn-glow p-2 rounded-lg"
             title="Send"
           >
             <Send className="w-4 h-4" />
@@ -67,7 +67,7 @@ const InputBar = ({
         {/* Mic button */}
         <button
           onClick={() => onMicToggle?.(!isListening)}
-          className={`sira-btn-glow p-2 rounded-lg transition-all duration-300 ${
+          className={`SYRA-btn-glow p-2 rounded-lg transition-all duration-300 ${
             isListening
               ? "!border-primary/80 shadow-[0_0_20px_hsl(225_100%_55%/0.5)] !bg-primary/20"
               : ""
@@ -79,7 +79,7 @@ const InputBar = ({
 
         {/* Chat button */}
         <button
-          className="sira-btn-glow p-2 rounded-lg"
+          className="SYRA-btn-glow p-2 rounded-lg"
           title="Chat"
         >
           <MessageSquare className="w-4 h-4" />
@@ -88,7 +88,7 @@ const InputBar = ({
         {/* Settings button */}
         <button
           onClick={onSettingsClick}
-          className="sira-btn-glow p-2 rounded-lg"
+          className="SYRA-btn-glow p-2 rounded-lg"
           title="Settings"
         >
           <Settings className="w-4 h-4" />
